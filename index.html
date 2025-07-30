@@ -17,6 +17,9 @@
             --light: #f8f9fa;
             --dark: #343a40;
             --accent: #8e44ad;
+            --success: #28a745;
+            --danger: #dc3545;
+            --info: #17a2b8;
         }
         
         * {
@@ -85,6 +88,21 @@
         .btn-primary {
             background-color: var(--secondary);
             color: var(--dark);
+        }
+        
+        .btn-success {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .btn-danger {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .btn-info {
+            background-color: var(--info);
+            color: white;
         }
         
         .features {
@@ -190,6 +208,32 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .reciters {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .reciter-btn {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.3rem 0.7rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .reciter-btn:hover, .reciter-btn.active {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
         }
         
         .methodology {
@@ -259,6 +303,134 @@
             margin-top: 0.3rem;
         }
         
+        .progress-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .progress-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background-color: var(--success);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .surah-progress {
+            margin-bottom: 2rem;
+        }
+        
+        .surah-progress h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .test-section {
+            padding: 4rem 0;
+            background-color: var(--light);
+            display: none;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .test-question {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .test-options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-option {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .test-option:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .test-option.selected {
+            background-color: var(--info);
+            color: white;
+            border-color: var(--info);
+        }
+        
+        .test-option.correct {
+            background-color: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+        
+        .test-option.incorrect {
+            background-color: var(--danger);
+            color: white;
+            border-color: var(--danger);
+        }
+        
+        .test-result {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+        
+        .bookmarks-section {
+            padding: 4rem 0;
+            background-color: white;
+            display: none;
+        }
+        
+        .bookmarks-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bookmark-item {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .bookmark-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .empty-message {
+            text-align: center;
+            color: #6c757d;
+            padding: 2rem;
+        }
+        
         footer {
             background-color: var(--dark);
             color: white;
@@ -271,6 +443,7 @@
             justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
         
         .footer-link {
@@ -300,6 +473,47 @@
             color: var(--secondary);
         }
         
+        .tab-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .tab-btn {
+            padding: 0.7rem 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .tab-btn:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -311,6 +525,15 @@
             
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .verse-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-nav {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -324,169 +547,189 @@
         </div>
     </header>
     
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Преимущества платформы</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="feature-title">Научный подход</h3>
-                    <p>Используем интервальные повторения и умные напоминания для эффективного запоминания</p>
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="openTab('learn')">Учить</button>
+        <button class="tab-btn" onclick="openTab('progress')">Прогресс</button>
+        <button class="tab-btn" onclick="openTab('test')">Тест</button>
+        <button class="tab-btn" onclick="openTab('bookmarks')">Закладки</button>
+        <button class="tab-btn" onclick="openTab('methodology')">Методика</button>
+        <button class="tab-btn" onclick="openTab('install')">Установка</button>
+    </div>
+    
+    <section class="tab-content active" id="learn-tab">
+        <div class="quran-section" id="start">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">Джуз Амма</h2>
+                <p>Выберите суру для начала запоминания</p>
+                
+                <div class="surah-selector">
+                    <button class="surah-btn active" onclick="loadSurah('Ан-Наба')">Ан-Наба</button>
+                    <button class="surah-btn" onclick="loadSurah('Ан-Назиат')">Ан-Назиат</button>
+                    <button class="surah-btn" onclick="loadSurah('Абаса')">Абаса</button>
+                    <button class="surah-btn" onclick="loadSurah('Ат-Таквир')">Ат-Таквир</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Инфитар')">Аль-Инфитар</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Мутаффифин')">Аль-Мутаффифин</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Иншикак')">Аль-Иншикак</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Бурудж')">Аль-Бурудж</button>
+                    <button class="surah-btn" onclick="loadSurah('Ат-Тарик')">Ат-Тарик</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Аля')">Аль-Аля</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Гашия')">Аль-Гашия</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Фаджр')">Аль-Фаджр</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Баляд')">Аль-Баляд</button>
+                    <button class="surah-btn" onclick="loadSurah('Аш-Шамс')">Аш-Шамс</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Лейл')">Аль-Лейл</button>
+                    <button class="surah-btn" onclick="loadSurah('Ад-Духа')">Ад-Духа</button>
+                    <button class="surah-btn" onclick="loadSurah('Аш-Шарх')">Аш-Шарх</button>
+                    <button class="surah-btn" onclick="loadSurah('Ат-Тин')">Ат-Тин</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Аляк')">Аль-Аляк</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Кадр')">Аль-Кадр</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Баййина')">Аль-Баййина</button>
+                    <button class="surah-btn" onclick="loadSurah('Аз-Зальзаля')">Аз-Зальзаля</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Адият')">Аль-Адият</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Кариа')">Аль-Кариа</button>
+                    <button class="surah-btn" onclick="loadSurah('Ат-Такасур')">Ат-Такасур</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Аср')">Аль-Аср</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Хумаза')">Аль-Хумаза</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Филь')">Аль-Филь</button>
+                    <button class="surah-btn" onclick="loadSurah('Курайш')">Курайш</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Маун')">Аль-Маун</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Каусар')">Аль-Каусар</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Кафирун')">Аль-Кафирун</button>
+                    <button class="surah-btn" onclick="loadSurah('Ан-Наср')">Ан-Наср</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Масад')">Аль-Масад</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Ихляс')">Аль-Ихляс</button>
+                    <button class="surah-btn" onclick="loadSurah('Аль-Фаляк')">Аль-Фаляк</button>
+                    <button class="surah-btn" onclick="loadSurah('Ан-Нас')">Ан-Нас</button>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Разные стили чтения</h3>
-                    <p>Прослушивание аятов от лучших чтецов Корана для улучшения произношения</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="feature-title">Отслеживание прогресса</h3>
-                    <p>Детальная статистика вашего продвижения в запоминании и повторении</p>
+                
+                <div class="verse-display" id="verse-display">
+                    <!-- Сюда загружаются аяты -->
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="quran-section" id="start">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Джуз Амма</h2>
-            <p>Выберите суру для начала запоминания</p>
-            
-            <div class="surah-selector">
-                <button class="surah-btn active">Ан-Наба</button>
-                <button class="surah-btn">Ан-Назиат</button>
-                <button class="surah-btn">Абаса</button>
-                <button class="surah-btn">Ат-Таквир</button>
-                <button class="surah-btn">Аль-Инфитар</button>
-                <button class="surah-btn">Аль-Мутаффифин</button>
-                <button class="surah-btn">Аль-Иншикак</button>
-                <button class="surah-btn">Аль-Бурудж</button>
-                <button class="surah-btn">Ат-Тарик</button>
-                <button class="surah-btn">Аль-Аля</button>
-                <button class="surah-btn">Аль-Гашия</button>
-                <button class="surah-btn">Аль-Фаджр</button>
-                <button class="surah-btn">Аль-Баляд</button>
-                <button class="surah-btn">Аш-Шамс</button>
-                <button class="surah-btn">Аль-Лейл</button>
-                <button class="surah-btn">Ад-Духа</button>
-                <button class="surah-btn">Аш-Шарх</button>
-                <button class="surah-btn">Ат-Тин</button>
-                <button class="surah-btn">Аль-Аляк</button>
-                <button class="surah-btn">Аль-Кадр</button>
-                <button class="surah-btn">Аль-Баййина</button>
-                <button class="surah-btn">Аз-Зальзаля</button>
-                <button class="surah-btn">Аль-Адият</button>
-                <button class="surah-btn">Аль-Кариа</button>
-                <button class="surah-btn">Ат-Такасур</button>
-                <button class="surah-btn">Аль-Аср</button>
-                <button class="surah-btn">Аль-Хумаза</button>
-                <button class="surah-btn">Аль-Филь</button>
-                <button class="surah-btn">Курайш</button>
-                <button class="surah-btn">Аль-Маун</button>
-                <button class="surah-btn">Аль-Каусар</button>
-                <button class="surah-btn">Аль-Кафирун</button>
-                <button class="surah-btn">Ан-Наср</button>
-                <button class="surah-btn">Аль-Масад</button>
-                <button class="surah-btn">Аль-Ихляс</button>
-                <button class="surah-btn">Аль-Фаляк</button>
-                <button class="surah-btn">Ан-Нас</button>
-            </div>
-            
-            <div class="verse-display">
-                <div class="verse-arabic">
-                    عَمَّ يَتَسَاءَلُونَ ﴿١﴾ عَنِ النَّبَإِ الْعَظِيمِ ﴿٢﴾ الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ ﴿٣﴾
-                </div>
-                <div class="verse-translation">
-                    "О чем они расспрашивают друг друга? О Великом известии, относительно которого они расходятся во мнениях"
-                </div>
-                <div class="verse-controls">
-                    <button class="btn"><i class="fas fa-play"></i> Прослушать</button>
-                    <button class="btn"><i class="fas fa-bookmark"></i> В закладки</button>
-                    <button class="btn"><i class="fas fa-check-circle"></i> Выучено</button>
+    <section class="tab-content" id="progress-tab">
+        <div class="progress-section">
+            <div class="container">
+                <h2 class="section-title">Ваш прогресс</h2>
+                <div class="progress-container" id="progress-container">
+                    <!-- Сюда загружается прогресс -->
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="methodology">
-        <div class="container">
-            <h2 class="section-title">Методика запоминания</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Активное слушание</h3>
-                        <p>Прослушайте аят 3-5 раз от чтеца, которого вам легко повторять. Обращайте внимание на произношение и интонацию.</p>
-                    </div>
+    <section class="tab-content" id="test-tab">
+        <div class="test-section">
+            <div class="container">
+                <h2 class="section-title">Проверка знаний</h2>
+                <div class="test-container" id="test-container">
+                    <div class="test-question" id="test-question"></div>
+                    <div class="test-options" id="test-options"></div>
+                    <button class="btn btn-primary" id="next-test-btn" style="display: none;">Следующий вопрос</button>
+                    <div class="test-result" id="test-result"></div>
+                    <button class="btn btn-success" id="start-test-btn">Начать тест</button>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Фрагментарное повторение</h3>
-                        <p>Разбейте аят на части по 3-5 слов и повторяйте каждую часть по 3 раза, затем соединяйте части вместе.</p>
-                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="tab-content" id="bookmarks-tab">
+        <div class="bookmarks-section">
+            <div class="container">
+                <h2 class="section-title">Ваши закладки</h2>
+                <div class="bookmarks-container" id="bookmarks-container">
+                    <!-- Сюда загружаются закладки -->
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Интервальные повторения</h3>
-                        <p>Повторите аят через 10 минут, затем через 1 час, через 6 часов и на следующий день. Система будет напоминать вам о повторениях.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="tab-content" id="methodology-tab">
+        <div class="methodology">
+            <div class="container">
+                <h2 class="section-title">Методика запоминания</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Активное слушание</h3>
+                            <p>Прослушайте аят 3-5 раз от чтеца, которого вам легко повторять. Обращайте внимание на произношение и интонацию.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3 class="step-title">Контекстное запоминание</h3>
-                        <p>Свяжите аят с предыдущими и следующими аятами, а также с его смысловым значением для лучшего запоминания.</p>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Фрагментарное повторение</h3>
+                            <p>Разбейте аят на части по 3-5 слов и повторяйте каждую часть по 3 раза, затем соединяйте части вместе.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Интервальные повторения</h3>
+                            <p>Повторите аят через 10 минут, затем через 1 час, через 6 часов и на следующий день. Система будет напоминать вам о повторениях.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Контекстное запоминание</h3>
+                            <p>Свяжите аят с предыдущими и следующими аятами, а также с его смысловым значением для лучшего запоминания.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Проверка знаний</h3>
+                            <p>Регулярно проходите тесты, чтобы закрепить выученные аяты и выявить слабые места.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="install-guide">
-        <div class="container">
-            <h2 class="section-title">Как установить на iPhone</h2>
-            <div class="guide-container">
-                <div class="guide-step">
-                    <div class="guide-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <div>
-                        <h3>1. Откройте сайт в Safari</h3>
-                        <p>Перейдите на этот сайт с помощью браузера Safari на вашем iPhone.</p>
+    <section class="tab-content" id="install-tab">
+        <div class="install-guide">
+            <div class="container">
+                <h2 class="section-title">Как установить на iPhone</h2>
+                <div class="guide-container">
+                    <div class="guide-step">
+                        <div class="guide-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div>
+                            <h3>1. Откройте сайт в Safari</h3>
+                            <p>Перейдите на этот сайт с помощью браузера Safari на вашем iPhone.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="guide-step">
-                    <div class="guide-icon"><i class="fas fa-share-square"></i></div>
-                    <div>
-                        <h3>2. Нажмите кнопку "Поделиться"</h3>
-                        <p>В нижней панели Safari найдите и нажмите кнопку "Поделиться" (иконка квадрата со стрелкой вверх).</p>
+                    <div class="guide-step">
+                        <div class="guide-icon"><i class="fas fa-share-square"></i></div>
+                        <div>
+                            <h3>2. Нажмите кнопку "Поделиться"</h3>
+                            <p>В нижней панели Safari найдите и нажмите кнопку "Поделиться" (иконка квадрата со стрелкой вверх).</p>
+                        </div>
                     </div>
-                </div>
-                <div class="guide-step">
-                    <div class="guide-icon"><i class="fas fa-plus-circle"></i></div>
-                    <div>
-                        <h3>3. Выберите "На экран Домой"</h3>
-                        <p>Прокрутите меню вниз и выберите опцию "На экран Домой".</p>
+                    <div class="guide-step">
+                        <div class="guide-icon"><i class="fas fa-plus-circle"></i></div>
+                        <div>
+                            <h3>3. Выберите "На экран Домой"</h3>
+                            <p>Прокрутите меню вниз и выберите опцию "На экран Домой".</p>
+                        </div>
                     </div>
-                </div>
-                <div class="guide-step">
-                    <div class="guide-icon"><i class="fas fa-check"></i></div>
-                    <div>
-                        <h3>4. Добавьте приложение</h3>
-                        <p>Назовите приложение (например, "Джуз Амма") и нажмите "Добавить". Теперь оно будет доступно с вашего домашнего экрана как полноценное приложение.</p>
+                    <div class="guide-step">
+                        <div class="guide-icon"><i class="fas fa-check"></i></div>
+                        <div>
+                            <h3>4. Добавьте приложение</h3>
+                            <p>Назовите приложение (например, "Джуз Амма") и нажмите "Добавить". Теперь оно будет доступно с вашего домашнего экрана как полноценное приложение.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="guide-step">
-                    <div class="guide-icon"><i class="fas fa-rocket"></i></div>
-                    <div>
-                        <h3>5. Начните использовать</h3>
-                        <p>Открывайте приложение с домашнего экрана - оно будет работать в полноэкранном режиме без адресной строки браузера.</p>
+                    <div class="guide-step">
+                        <div class="guide-icon"><i class="fas fa-rocket"></i></div>
+                        <div>
+                            <h3>5. Начните использовать</h3>
+                            <p>Открывайте приложение с домашнего экрана - оно будет работать в полноэкранном режиме без адресной строки браузера.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -511,29 +754,53 @@
     </footer>
     
     <script>
-        // Все суры джуза Амма с хариятами
+        // Все суры джуза Амма с хариятами и переводами
         const juzAmma = {
             "Ан-Наба": {
                 verses: [
                     "عَمَّ يَتَسَاءَلُونَ ﴿١﴾ عَنِ النَّبَإِ الْعَظِيمِ ﴿٢﴾ الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ ﴿٣﴾",
-                    "كَلَّا سَيَعْلَمُونَ ﴿٤﴾ ثُمَّ كَلَّا سَيَعْلَمُونَ ﴿٥﴾"
+                    "كَلَّا سَيَعْلَمُونَ ﴿٤﴾ ثُمَّ كَلَّا سَيَعْلَمُونَ ﴿٥﴾",
+                    "أَلَمْ نَجْعَلِ الْأَرْضَ مِهَادًا ﴿٦﴾ وَالْجِبَالَ أَوْتَادًا ﴿٧﴾",
+                    "وَخَلَقْنَاكُمْ أَزْوَاجًا ﴿٨﴾ وَجَعَلْنَا نَوْمَكُمْ سُبَاتًا ﴿٩﴾",
+                    "وَجَعَلْنَا اللَّيْلَ لِبَاسًا ﴿١٠﴾ وَجَعَلْنَا النَّهَارَ مَعَاشًا ﴿١١﴾",
+                    "وَبَنَيْنَا فَوْقَكُمْ سَبْعًا شِدَادًا ﴿١٢﴾ وَجَعَلْنَا سِرَاجًا وَهَّاجًا ﴿١٣﴾",
+                    "وَأَنزَلْنَا مِنَ الْمُعْصِرَاتِ مَاءً ثَجَّاجًا ﴿١٤﴾ لِنُخْرِجَ بِهِ حَبًّا وَنَبَاتًا ﴿١٥﴾",
+                    "وَجَنَّاتٍ أَلْفَافًا ﴿١٦﴾ إِنَّ يَوْمَ الْفَصْلِ كَانَ مِيقَاتًا ﴿١٧﴾"
                 ],
                 translations: [
                     "О чем они расспрашивают друг друга? О Великом известии, относительно которого они расходятся во мнениях",
-                    "Но нет! Скоро они узнают. Еще раз нет! Скоро они узнают"
+                    "Но нет! Скоро они узнают. Еще раз нет! Скоро они узнают",
+                    "Разве Мы не сделали землю ложем, а горы - колышками?",
+                    "Мы создали вас парами и сделали ваш сон отдыхом",
+                    "Мы сделали ночь покровом, а день - временем для жизненных дел",
+                    "Мы воздвигли над вами семь прочных небес и установили пылающий светильник",
+                    "Мы пролили из дождевых туч обильные ливни, чтобы взрастить благодаря им зерна и растения",
+                    "И густые сады. Воистину, День Различения - это срок, назначенный для всех"
                 ],
-                audio: "https://example.com/audio/78.mp3"
+                audio: {
+                    "Мишари Рашид": "https://server.mp3quran.net/mish_r/078.mp3",
+                    "Сауд аш-Шураим": "https://server.mp3quran.net/shs/078.mp3",
+                    "Махир аль-Муайкли": "https://server.mp3quran.net/maher/078.mp3"
+                }
             },
             "Ан-Назиат": {
                 verses: [
                     "وَالنَّازِعَاتِ غَرْقًا ﴿١﴾ وَالنَّاشِطَاتِ نَشْطًا ﴿٢﴾ وَالسَّابِحَاتِ سَبْحًا ﴿٣﴾",
-                    "فَالسَّابِقَاتِ سَبْقًا ﴿٤﴾ فَالْمُدَبِّرَاتِ أَمْرًا ﴿٥﴾"
+                    "فَالسَّابِقَاتِ سَبْقًا ﴿٤﴾ فَالْمُدَبِّرَاتِ أَمْرًا ﴿٥﴾",
+                    "يَوْمَ تَرْجُفُ الرَّاجِفَةُ ﴿٦﴾ تَتْبَعُهَا الرَّادِفَةُ ﴿٧﴾",
+                    "قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ ﴿٨﴾ أَبْصَارُهَا خَاشِعَةٌ ﴿٩﴾"
                 ],
                 translations: [
                     "Клянусь вырывающими с силой, клянусь извлекающими легко, клянусь плывущими стремительно",
-                    "Клянусь опережающими быстро, клянусь исполняющими повеления"
+                    "Клянусь опережающими быстро, клянусь исполняющими повеления",
+                    "В тот день, когда сотрясется сотрясающее, за которым последует следующее",
+                    "Сердца в тот день будут трепетать, а взоры будут смиренно опущены"
                 ],
-                audio: "https://example.com/audio/79.mp3"
+                audio: {
+                    "Мишари Рашид": "https://server.mp3quran.net/mish_r/079.mp3",
+                    "Сауд аш-Шураим": "https://server.mp3quran.net/shs/079.mp3",
+                    "Махир аль-Муайкли": "https://server.mp3quran.net/maher/079.mp3"
+                }
             },
             // Добавьте остальные суры по аналогии
             "Ан-Нас": {
@@ -545,74 +812,413 @@
                     "Скажи: «Прибегаю к защите Господа людей, Царя людей, Бога людей",
                     "от зла искусителя отступающего при поминании Аллаха, который наущает в груди людей, и бывает он из джиннов и людей»"
                 ],
-                audio: "https://example.com/audio/114.mp3"
+                audio: {
+                    "Мишари Рашид": "https://server.mp3quran.net/mish_r/114.mp3",
+                    "Сауд аш-Шураим": "https://server.mp3quran.net/shs/114.mp3",
+                    "Махир аль-Муайкли": "https://server.mp3quran.net/maher/114.mp3"
+                }
             }
         };
 
-        // Выбор суры
-        document.querySelectorAll('.surah-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.surah-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                
-                const surahName = this.textContent;
-                const surah = juzAmma[surahName];
-                
-                if (surah) {
-                    const verseDisplay = document.querySelector('.verse-display');
-                    verseDisplay.innerHTML = `
-                        <div class="verse-arabic">${surah.verses[0]}</div>
-                        <div class="verse-translation">${surah.translations[0]}</div>
-                        <div class="verse-controls">
-                            <button class="btn" onclick="playAudio('${surah.audio}')">
-                                <i class="fas fa-play"></i> Прослушать
-                            </button>
-                            <button class="btn" onclick="addToBookmarks('${surahName}', 1)">
-                                <i class="fas fa-bookmark"></i> В закладки
-                            </button>
-                            <button class="btn" onclick="markAsLearned('${surahName}', 1)">
-                                <i class="fas fa-check-circle"></i> Выучено
-                            </button>
-                        </div>
-                    `;
+        // Текущее состояние
+        let currentSurah = "Ан-Наба";
+        let currentVerse = 0;
+        let currentReciter = "Мишари Рашид";
+        let testQuestions = [];
+        let currentTestQuestion = 0;
+        let testScore = 0;
+
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSurah(currentSurah);
+            loadProgress();
+            loadBookmarks();
+            
+            // Инициализация теста
+            document.getElementById('start-test-btn').addEventListener('click', startTest);
+            document.getElementById('next-test-btn').addEventListener('click', nextTestQuestion);
+        });
+
+        // Загрузка суры
+        function loadSurah(surahName) {
+            currentSurah = surahName;
+            currentVerse = 0;
+            
+            // Обновляем активную кнопку суры
+            document.querySelectorAll('.surah-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === surahName) {
+                    btn.classList.add('active');
                 }
             });
-        });
-        
-        // Имитация работы с аудио
-        function playAudio(url) {
-            alert("Сейчас должно загрузиться аудио: " + url);
+            
+            const surah = juzAmma[surahName];
+            const verseDisplay = document.getElementById('verse-display');
+            
+            if (surah) {
+                verseDisplay.innerHTML = `
+                    <div class="verse-arabic">${surah.verses[0]}</div>
+                    <div class="verse-translation">${surah.translations[0]}</div>
+                    <div class="reciters">
+                        ${Object.keys(surah.audio).map(reciter => `
+                            <button class="reciter-btn ${reciter === currentReciter ? 'active' : ''}" 
+                                    onclick="setReciter('${reciter}')">
+                                ${reciter}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div class="verse-controls">
+                        <button class="btn" onclick="playCurrentVerse()">
+                            <i class="fas fa-play"></i> Прослушать
+                        </button>
+                        <button class="btn" onclick="addToBookmarks()">
+                            <i class="fas fa-bookmark"></i> В закладки
+                        </button>
+                        <button class="btn btn-success" onclick="markAsLearned()">
+                            <i class="fas fa-check-circle"></i> Выучено
+                        </button>
+                        <button class="btn btn-info" onclick="nextVerse()">
+                            <i class="fas fa-arrow-right"></i> Следующий аят
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // Установка чтеца
+        function setReciter(reciter) {
+            currentReciter = reciter;
+            document.querySelectorAll('.reciter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === reciter) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        // Воспроизведение текущего аята
+        function playCurrentVerse() {
+            const surah = juzAmma[currentSurah];
+            const audioUrl = surah.audio[currentReciter];
+            
             // В реальном приложении здесь будет код для воспроизведения аудио
+            // Для демонстрации просто показываем сообщение
+            alert(`Воспроизведение аята ${currentVerse + 1} суры ${currentSurah} в исполнении ${currentReciter}\nАудио: ${audioUrl}`);
+            
+            // Можно использовать HTML5 Audio API:
+            // const audio = new Audio(audioUrl);
+            // audio.play();
         }
-        
-        // Локальное хранилище для закладок и прогресса
-        if (!localStorage.getItem('bookmarks')) {
-            localStorage.setItem('bookmarks', JSON.stringify([]));
+
+        // Следующий аят
+        function nextVerse() {
+            const surah = juzAmma[currentSurah];
+            currentVerse = (currentVerse + 1) % surah.verses.length;
+            loadSurah(currentSurah);
         }
-        
-        if (!localStorage.getItem('progress')) {
-            localStorage.setItem('progress', JSON.stringify({}));
+
+        // Добавление в закладки
+        function addToBookmarks() {
+            const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || [];
+            
+            // Проверяем, нет ли уже этой закладки
+            const existing = bookmarks.find(b => b.surah === currentSurah && b.verse === currentVerse);
+            
+            if (!existing) {
+                bookmarks.push({ 
+                    surah: currentSurah, 
+                    verse: currentVerse,
+                    date: new Date().toISOString()
+                });
+                localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+                alert(`Аят ${currentVerse + 1} суры ${currentSurah} добавлен в закладки`);
+                loadBookmarks();
+            } else {
+                alert("Этот аят уже в ваших закладках");
+            }
         }
-        
-        function addToBookmarks(surah, verse) {
-            const bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
-            bookmarks.push({ surah, verse });
-            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-            alert(`Аят ${verse} суры ${surah} добавлен в закладки`);
-        }
-        
-        function markAsLearned(surah, verse) {
-            const progress = JSON.parse(localStorage.getItem('progress'));
-            if (!progress[surah]) progress[surah] = [];
-            if (!progress[surah].includes(verse)) {
-                progress[surah].push(verse);
+
+        // Отметка как выученного
+        function markAsLearned() {
+            const progress = JSON.parse(localStorage.getItem('progress')) || {};
+            
+            if (!progress[currentSurah]) {
+                progress[currentSurah] = [];
+            }
+            
+            if (!progress[currentSurah].includes(currentVerse)) {
+                progress[currentSurah].push(currentVerse);
                 localStorage.setItem('progress', JSON.stringify(progress));
-                alert(`Аят ${verse} суры ${surah} отмечен как выученный`);
+                alert(`Аят ${currentVerse + 1} суры ${currentSurah} отмечен как выученный`);
+                loadProgress();
             } else {
                 alert("Этот аят уже отмечен как выученный");
             }
         }
-        
+
+        // Загрузка прогресса
+        function loadProgress() {
+            const progress = JSON.parse(localStorage.getItem('progress')) || {};
+            const progressContainer = document.getElementById('progress-container');
+            
+            let html = '';
+            let totalLearned = 0;
+            let totalVerses = 0;
+            
+            // Прогресс по сурам
+            for (const surahName in juzAmma) {
+                const surah = juzAmma[surahName];
+                const learnedVerses = progress[surahName] || [];
+                const percent = Math.round((learnedVerses.length / surah.verses.length) * 100);
+                
+                totalLearned += learnedVerses.length;
+                totalVerses += surah.verses.length;
+                
+                html += `
+                    <div class="surah-progress">
+                        <h3>${surahName} (${learnedVerses.length}/${surah.verses.length})</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${percent}%"></div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Общий прогресс
+            const totalPercent = Math.round((totalLearned / totalVerses) * 100);
+            html = `
+                <div class="surah-progress">
+                    <h3>Общий прогресс (${totalLearned}/${totalVerses})</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${totalPercent}%"></div>
+                    </div>
+                </div>
+                ${html}
+            `;
+            
+            progressContainer.innerHTML = html;
+        }
+
+        // Загрузка закладок
+        function loadBookmarks() {
+            const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+            const bookmarksContainer = document.getElementById('bookmarks-container');
+            
+            if (bookmarks.length === 0) {
+                bookmarksContainer.innerHTML = '<div class="empty-message">У вас пока нет закладок</div>';
+                return;
+            }
+            
+            let html = '';
+            
+            bookmarks.forEach((bookmark, index) => {
+                const surah = juzAmma[bookmark.surah];
+                if (surah) {
+                    html += `
+                        <div class="bookmark-item">
+                            <h3>${bookmark.surah}, аят ${bookmark.verse + 1}</h3>
+                            <div class="verse-arabic">${surah.verses[bookmark.verse]}</div>
+                            <div class="verse-translation">${surah.translations[bookmark.verse]}</div>
+                            <div class="verse-controls">
+                                <button class="btn btn-info" onclick="goToBookmark('${bookmark.surah}', ${bookmark.verse})">
+                                    <i class="fas fa-eye"></i> Перейти
+                                </button>
+                                <button class="btn btn-danger" onclick="removeBookmark(${index})">
+                                    <i class="fas fa-trash"></i> Удалить
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+            
+            bookmarksContainer.innerHTML = html;
+        }
+
+        // Переход к закладке
+        function goToBookmark(surahName, verseIndex) {
+            currentSurah = surahName;
+            currentVerse = verseIndex;
+            loadSurah(currentSurah);
+            openTab('learn');
+        }
+
+        // Удаление закладки
+        function removeBookmark(index) {
+            const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+            bookmarks.splice(index, 1);
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+            loadBookmarks();
+        }
+
+        // Начало теста
+        function startTest() {
+            // Создаем вопросы для теста
+            testQuestions = generateTestQuestions();
+            currentTestQuestion = 0;
+            testScore = 0;
+            
+            showTestQuestion();
+            
+            document.getElementById('start-test-btn').style.display = 'none';
+            document.getElementById('next-test-btn').style.display = 'none';
+            document.getElementById('test-result').style.display = 'none';
+        }
+
+        // Генерация вопросов для теста
+        function generateTestQuestions() {
+            const questions = [];
+            const progress = JSON.parse(localStorage.getItem('progress')) || {};
+            
+            // Собираем все выученные аяты
+            const learnedVerses = [];
+            for (const surahName in progress) {
+                if (juzAmma[surahName]) {
+                    progress[surahName].forEach(verse => {
+                        learnedVerses.push({
+                            surah: surahName,
+                            verse: verse,
+                            text: juzAmma[surahName].verses[verse],
+                            translation: juzAmma[surahName].translations[verse]
+                        });
+                    });
+                }
+            }
+            
+            // Если выученных аятов мало, добавляем случайные
+            if (learnedVerses.length < 10) {
+                for (const surahName in juzAmma) {
+                    const surah = juzAmma[surahName];
+                    for (let i = 0; i < surah.verses.length; i++) {
+                        if (!progress[surahName] || !progress[surahName].includes(i)) {
+                            learnedVerses.push({
+                                surah: surahName,
+                                verse: i,
+                                text: surah.verses[i],
+                                translation: surah.translations[i]
+                            });
+                        }
+                    }
+                }
+            }
+            
+            // Создаем вопросы
+            for (let i = 0; i < Math.min(10, learnedVerses.length); i++) {
+                const randomIndex = Math.floor(Math.random() * learnedVerses.length);
+                const verse = learnedVerses[randomIndex];
+                
+                // Удаляем выбранный аят, чтобы не повторяться
+                learnedVerses.splice(randomIndex, 1);
+                
+                // Создаем варианты ответов
+                const options = [verse.translation];
+                while (options.length < 4) {
+                    const randomVerse = learnedVerses[Math.floor(Math.random() * learnedVerses.length)];
+                    if (!options.includes(randomVerse.translation)) {
+                        options.push(randomVerse.translation);
+                    }
+                }
+                
+                // Перемешиваем варианты
+                options.sort(() => Math.random() - 0.5);
+                
+                questions.push({
+                    verse: verse.text,
+                    correctAnswer: verse.translation,
+                    options: options
+                });
+            }
+            
+            return questions;
+        }
+
+        // Показ вопроса теста
+        function showTestQuestion() {
+            if (currentTestQuestion >= testQuestions.length) {
+                // Тест завершен
+                const result = Math.round((testScore / testQuestions.length) * 100);
+                document.getElementById('test-result').textContent = `Тест завершен! Ваш результат: ${result}%`;
+                document.getElementById('test-result').style.display = 'block';
+                document.getElementById('start-test-btn').style.display = 'block';
+                document.getElementById('start-test-btn').textContent = 'Начать новый тест';
+                document.getElementById('next-test-btn').style.display = 'none';
+                document.getElementById('test-question').textContent = '';
+                document.getElementById('test-options').innerHTML = '';
+                return;
+            }
+            
+            const question = testQuestions[currentTestQuestion];
+            document.getElementById('test-question').textContent = question.verse;
+            
+            let optionsHtml = '';
+            question.options.forEach((option, index) => {
+                optionsHtml += `
+                    <div class="test-option" onclick="selectTestOption(${index})">
+                        ${option}
+                    </div>
+                `;
+            });
+            
+            document.getElementById('test-options').innerHTML = optionsHtml;
+        }
+
+        // Выбор варианта ответа
+        function selectTestOption(index) {
+            const question = testQuestions[currentTestQuestion];
+            const options = document.querySelectorAll('.test-option');
+            
+            options.forEach((option, i) => {
+                option.classList.remove('selected');
+                if (question.options[i] === question.correctAnswer) {
+                    option.classList.add('correct');
+                } else if (i === index) {
+                    option.classList.add('incorrect');
+                }
+                
+                // Отключаем дальнейшие клики
+                option.style.pointerEvents = 'none';
+            });
+            
+            // Проверяем ответ
+            if (question.options[index] === question.correctAnswer) {
+                testScore++;
+            }
+            
+            // Показываем кнопку "Далее"
+            document.getElementById('next-test-btn').style.display = 'block';
+        }
+
+        // Следующий вопрос теста
+        function nextTestQuestion() {
+            currentTestQuestion++;
+            showTestQuestion();
+            document.getElementById('next-test-btn').style.display = 'none';
+        }
+
+        // Переключение вкладок
+        function openTab(tabName) {
+            // Скрываем все вкладки
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Деактивируем все кнопки
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Активируем выбранную вкладку и кнопку
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+            document.querySelector(`.tab-btn[onclick="openTab('${tabName}')"]`).classList.add('active');
+            
+            // Обновляем данные при открытии некоторых вкладок
+            if (tabName === 'progress') {
+                loadProgress();
+            } else if (tabName === 'bookmarks') {
+                loadBookmarks();
+            }
+        }
+
         // Проверка PWA-возможностей
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
